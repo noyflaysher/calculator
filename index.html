@@ -7,7 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@400;700&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Sacramento&family=Spartan:wght@100&display=swap" rel="stylesheet">
+  
   <title>Frontend Mentor | Calculator app</title>
+
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,101 +18,70 @@
   </style>
 </head>
 <body>
-  <!-- <div class="container">
-    <div class="top">
-      <div class="calc">calc</div>
-      <div class="theme"></div>
-      <div class="toggle">
-        <div class="states">
-          <div class="one">1</div>
-          <div class="one">2</div>
-          <div class="one">3</div>
-        </div>
-        <div class="toggle-bottom">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="calculator-grid">
-      <div class="output"></div>
-      <button class="numbers">7</button>
-      <button class="numbers">8</button>
-      <button class="numbers">9</button>
-      <button class="operators">DEL</button>
-      <button class="numbers">4</button>
-      <button class="numbers">5</button>
-      <button class="numbers">6</button>
-      <button class="operators">+</button>
-      <button class="numbers">1</button>
-      <button class="numbers">2</button>
-      <button class="numbers">3</button>
-      <button class="operators">-</button>
-      <button class="operators">.</button>
-      <button class="numbers">0</button>
-      <button class="operators">/</button>
-      <button class="operators">x</button>
-      <button class="reset">reset</button>
-      <button class="equal">=</button>
-
-    </div> -->
-<!-- </div> -->
- 
-
-
-
-
 <div class="container">
+
   <div class="top">
-    <div class="calc">calc</div>
-    <div class="top-right">
-      <div class="theme">THEME</div>
-    <div class="toggle">
-      <div class="states">
-        <div class="one">1</div>
-        <div class="two">2</div>
-        <div class="three">3</div>
-      </div>
-      <div class="toggle-bottom">
-        <div class="circle"></div>
-      </div>
+    <div class="calc">
+      <p>calc</p>
     </div>
+    <div class="right-side">
+      <div class="theme">
+        <p>THEME</p>
+      </div>
+      <div class="switch">
+        <div class="style">
+          <div class="style_num">1</div>
+          <div class="style_num">2</div>
+          <div class="style_num">3</div>
+        </div>
+       <div class="toggle-bottom">
+         <input type="radio" name="toggle" value="1" checked>
+         <label class="toggle"></label>
+
+         <input type="radio" name="toggle" value="2">
+         <label class="toggle"></label>
+
+         <input type="radio" name="toggle" value="3">
+         <label class="toggle"></label>
+         <span></span>  
+       </div>
     </div>
     
   </div>
 
   <div class="calculator">
-    <div class="top-calculator">
-      <div class="output"></div>
+    <div class="screen">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
     </div>
     <div class="main-calculator">
-      <div class="row-1">
-        <button class="numbers">7</button>
-        <button class="numbers">8</button>
-        <button class="numbers">9</button>
-        <button class="operators del">DEL</button>
+      <div class="row">
+        <button data-numbers class="numbers">7</button>
+        <button data-numbers class="numbers">8</button>
+        <button data-numbers class="numbers">9</button>
+        <button data-delete  class="operators del">DEL</button>
       </div>
-      <div class="row-2">
-        <button class="numbers">4</button>
-        <button class="numbers">5</button>
-        <button class="numbers">6</button>
-        <button class="operators">+</button>
+      <div class="row">
+        <button data-numbers class="numbers">4</button>
+        <button data-numbers class="numbers">5</button>
+        <button data-numbers class="numbers">6</button>
+        <button data-operators class="operators">+</button>
       </div>
-      <div class="row-3">
-        <button class="numbers">1</button>
-        <button class="numbers">2</button>
-        <button class="numbers">3</button>
-        <button class="operators">-</button>
+      <div class="row">
+        <button data-numbers class="numbers">1</button>
+        <button data-numbers class="numbers">2</button>
+        <button data-numbers class="numbers">3</button>
+        <button data-operators class="operators">-</button>
       </div>
-      <div class="row-4">
-        <button class="numbers">.</button>
-        <button class="numbers">0</button>
-        <button class="operators">/</button>
-        <button class="operators">x</button>
+      <div class="row">
+        <button data-numbers class="numbers">.</button>
+        <button data-numbers class="numbers">0</button>
+        <button data-operators class="operators divide">/</button>
+        <button data-operators class="operators">x</button>
       </div>
       <div class="row-5">
-        <button class="reset">RESET</button>
-        <button class="equal">=</button>
+        <button data-reset class="reset">RESET</button>
+        <button data-equal class="equal">=</button>
       </div>
     </div>
   </div>
@@ -121,4 +92,5 @@
     Coded by <a href="#">Noy Flaysher</a>.
   </div>
 </body>
+<script src="script.js"></script>
 </html>
