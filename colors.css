@@ -1,0 +1,129 @@
+  
+  :root{
+    /*------------------------theme 1--------------------------*/
+    --main-background1:hsl(222, 26%, 31%); /*main background*/
+    --main-calculator1:hsl(223, 31%, 20%); /*toggle background, keypad background*/
+    --Dark-Blue3-theme1:hsl(224, 36%, 15%); /*screen background*/
+    --del-res-background1:hsl(225, 21%, 49%); /*key background*/
+    --del-res-background1: hsl(224, 28%, 35%); /*key shadow*/
+    --equal-background1:hsl(6, 63%, 50%); /*key background, toggle*/
+    --equal-shadow1:hsl(6, 70%, 34%); /*key shadow*/
+    --Blue-text1:hsl(221, 14%, 31%);/*blue text*/
+    --White-theme1:hsl(0, 0, 100%);/*white text*/
+    /*------------------------theme 2--------------------------*/
+  --main-backgrond2:hsl(0, 0%, 90%); /*main-background*/
+  --toggle-calculate-background2:hsl(0, 5%, 81%); /*toggle background, keypad background*/
+  --screen-background2:hsl(0, 0%, 93%); /*screen background, keypad background*/
+  --del-reset-background2:hsl(185, 42%, 37%); /*key background*/
+  --del-reset-shadow2:hsl(185, 58%, 25%); /*key shadow*/
+  --equal-circle-background2:hsl(25, 98%, 40%); /*key background, toggle*/
+  --equal-circle-shadow2:hsl(25, 98%, 40%); /*key background, toggle*/
+  --key-background2:hsl(45, 7%, 89%); /*key background*/
+  --Key-shadow2:hsl(35, 11%, 61%)    ; /*key background*/
+  --Dark-yellow-theme2:hsl(60, 10%, 19%); /*yellow text*/
+  --White-text2:hsl(0, 0, 100%);/*white text*/
+/*------------------------theme 3--------------------------*/
+--main-background3:hsl(268, 75%, 9%);/*main background*/
+--toggle-calculate-background3:hsl(268, 71%, 12%);/*toggle background, keypad background, screen background*/
+--screen-background3:hsl(281, 89%, 26%);/*key background*/
+--key-s:hsl(285, 91%, 52%);/*key shadow*/
+--key:hsl(285, 91%, 52%);/*key background, toggle*/
+--del-shadow3:hsl(177, 92%, 70%);/*key shadow*/
+--key-shadow3:hsl(268, 47%, 21%);/*key background*/
+--key-background3: hsl(290, 70%, 36%);/*key shadow*/
+--yellow-text3: hsl(52, 100%, 62%);/*yellow text*/
+--Dark-Blue-theme3:hsl(198, 20%, 13%); /*blue text*/
+--White-theme3:hsl(0, 0, 100%);/*white text*/
+--circle-color-3:hsl(176, 100%, 44%);/*circle color*/
+}
+
+/* changed when we click on number two*/
+
+body.active1{
+    background-color: var(--main-backgrond2);
+  }
+
+  body.active1 .control .box{
+    background-color: var(--toggle-calculate-background2);
+  }
+
+  body.active1 .screen{
+    background-color: var(--screen-background2);
+    color: #111;
+  }
+
+  body.active1 .control #circle{
+    background-color: var(--equal-circle-background2);
+  }
+
+  body.active1 .main-calculator{
+    background-color: var( --toggle-calculate-background2);
+  }
+
+  body.active1 .reset, body.active1 .delete {
+    background-color: var(--del-reset-background2);
+    box-shadow: 0px 3px 0px 0px var(--del-reset-shadow2);
+    color:#FFF;
+  }
+
+  body.active1 button{
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  }
+
+  body.active1.equal{
+    background-color: var(--equal-circle-background2);
+    box-shadow: 0px 3px 0px 0px var(--equal-circle-shadow2);
+  }
+
+  body.active1 h3, body.active1 .theme, body.active1 .right p {
+    color: #111;
+  }
+
+  /************************************************/
+/* changed when we click on number two*/
+
+body.active2{
+  background-color: var(--main-background3);
+}
+
+body.active2 .control .box{
+  background-color: var(--toggle-calculate-background3);
+}
+
+body.active2 .screen{
+  background-color: var( --toggle-calculate-background3);
+  color: var(--yellow-text3);
+}
+
+body.active2 .control #circle{
+  background-color:var(--circle-color-3);
+}
+
+body.active2 h3, body.active2 .theme, body.active2 .right p{
+  color:var(--yellow-text3);
+}
+
+body.active2 button{
+	box-shadow: 0px 3px 0px 0px var(--key-shadow3);
+	background-color:var(--key-background3);
+  color:var(--yellow-text3);
+}
+
+body.active2 .main-calculator{
+  background-color: var(--toggle-calculate-background3);
+}
+
+body.active2 .reset, body.active2 .delete {
+  background-color: var( --toggle-calculate-background3);
+  box-shadow: 0px 3px 0px 0px var(--key-background3);
+  color:#FFF;
+}
+
+body.active2 .equal{
+  background-color: var(--circle-color-3);
+  box-shadow: 0px 3px 0px 0px var( --del-shadow3);
+  color:#FFF;
+}
+
+
+/************************************************/

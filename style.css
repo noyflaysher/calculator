@@ -1,138 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@400;700&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Sacramento&family=Spartan:wght@100&display=swap');
 
-  
-  :root{
-      /*------------------------theme 1--------------------------*/
-      --Dark-Blue1-theme1:hsl(222, 26%, 31%); /*main background*/
-      --Dark-Blue2-theme1:hsl(223, 31%, 20%); /*toggle background, keypad background*/
-      --Dark-Blue3-theme1:hsl(224, 36%, 15%); /*screen background*/
-      --Dark-Blue4-theme1:hsl(225, 21%, 49%); /*key background*/
-      --Dark-Blue5-theme1: hsl(224, 28%, 35%); /*key shadow*/
-      --Red-theme1:hsl(6, 63%, 50%); /*key background, toggle*/
-      --Dark-Red-theme1:hsl(6, 70%, 34%); /*key shadow*/
-      --Orange-theme1:hsl(30, 25%, 89%); /*key background*/
-      --Red-theme1: hsl(28, 16%, 65%); /*key background, toggle*/
-      --Blue6-theme1:hsl(221, 14%, 31%);/*blue text*/
-      --White-theme1:hsl(0, 0, 100%);/*white text*/
-      /*------------------------theme 2--------------------------*/
-    --main-backgrond2:hsl(0, 0%, 90%); /*main-background*/
-    --toggle-calculate-background2:hsl(0, 5%, 81%); /*toggle background, keypad background*/
-    --screen-background2:hsl(0, 0%, 93%); /*screen background, keypad background*/
-    --del-reset-background2:hsl(185, 42%, 37%); /*key background*/
-    --del-reset-shadow2:hsl(185, 58%, 25%); /*key shadow*/
-    --equal-circle-background2:hsl(25, 98%, 40%); /*key background, toggle*/
-    --equal-circle-shadow2:hsl(25, 98%, 40%); /*key background, toggle*/
-    --key-background2:hsl(45, 7%, 89%); /*key background*/
-    --Key-shadow2:hsl(35, 11%, 61%)    ; /*key background*/
-    --Dark-yellow-theme2:hsl(60, 10%, 19%); /*yellow text*/
-    --White-text2:hsl(0, 0, 100%);/*white text*/
- /*------------------------theme 3--------------------------*/
- --main-background3:hsl(268, 75%, 9%);/*main background*/
- --toggle-calculate-background3:hsl(268, 71%, 12%);/*toggle background, keypad background, screen background*/
- --screen-background3:hsl(281, 89%, 26%);/*key background*/
- --key-s:hsl(285, 91%, 52%);/*key shadow*/
- --key:hsl(285, 91%, 52%);/*key background, toggle*/
- --del-shadow3:hsl(177, 92%, 70%);/*key shadow*/
- --key-shadow3:hsl(268, 47%, 21%);/*key background*/
- --key-background3: hsl(290, 70%, 36%);/*key shadow*/
- --yellow-text3: hsl(52, 100%, 62%);/*yellow text*/
- --Dark-Blue-theme3:hsl(198, 20%, 13%); /*blue text*/
- --White-theme3:hsl(0, 0, 100%);/*white text*/
- --circle-color-3:hsl(176, 100%, 44%);
-  }
-
-  /* changed when we click on number two*/
-
-  body.active1{
-    background-color: var(--main-backgrond2);
-  }
-
-  body.active1 .control .box{
-    background-color: var(--toggle-calculate-background2);
-  }
-
-  body.active1 .screen{
-    background-color: var(--screen-background2);
-    color: #111;
-  }
-
-  body.active1 .control #circle{
-    background-color: var(--equal-circle-background2);
-  }
-
-  body.active1 .main-calculator{
-    background-color: var( --toggle-calculate-background2);
-  }
-
-  body.active1 .reset, body.active1 .del {
-    background-color: var(--del-reset-background2);
-    box-shadow: 0px 3px 0px 0px var(--del-reset-shadow2);
-    color:#FFF;
-  }
-
-  body.active1 button{
-    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
-  }
-
-  body.active1.equal{
-    background-color: var(--equal-circle-background2);
-    box-shadow: 0px 3px 0px 0px var(--equal-circle-shadow2);
-  }
-
-  body.active1 .toggle h3, body.active1 .control p, body.active1 .right p {
-    color: #111;
-  }
-
-  /************************************************/
-/* changed when we click on number two*/
-
-body.active2{
-  background-color: var(--main-background3);
-}
-
-body.active2 .control .box{
-  background-color: var(--toggle-calculate-background3);
-}
-
-body.active2 .screen{
-  background-color: var( --toggle-calculate-background3);
-  color: var(--yellow-text3);
-}
-
-body.active2 .control #circle{
-  background-color:var(--circle-color-3);
-}
-
-body.active2 .toggle h3, body.active2 .control p, body.active2 .right p{
-  color:var(--yellow-text3);
-}
-
-body.active2 button{
-	box-shadow: 0px 3px 0px 0px var(--key-shadow3);
-	background-color:var(--key-background3);
-  color:var(--yellow-text3);
-}
-
-body.active2 .main-calculator{
-  background-color: var(--toggle-calculate-background3);
-}
-
-body.active2 .reset, body.active2 .del {
-  background-color: var( --toggle-calculate-background3);
-  box-shadow: 0px 3px 0px 0px var(--key-background3);
-  color:#FFF;
-}
-
-body.active2 .equal{
-  background-color: var(--circle-color-3);
-  box-shadow: 0px 3px 0px 0px var( --del-shadow3);
-  color:#FFF;
-}
-
-
-/************************************************/
-
-
   *{
     margin:0px;
     padding: 0px;
@@ -143,7 +10,7 @@ body.active2 .equal{
     font-family: 'Spartan', sans-serif;
     font-size: 32px;
     margin: auto;
-    background-color:var(--Dark-Blue1-theme1) ;
+    background-color:var(--main-background1) ;
     border-style: box ;
     align-items: center;
   }
@@ -158,14 +25,35 @@ body.active2 .equal{
     align-items: center;
   }
 
+  .title{
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .flex{
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+  }
 
   h3{
     color: #FFF;
+    font-size: 20px;
+    margin-right: 70px;
+  }
+
+  .theme{
+    color: #FFF;
+    cursor: pointer;
+    margin-right: 4px;
+    font-size: 17px;
+    margin-top: 6px;
   }
 
   .control{
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
   }
   .control .box{
     width: 60px;
@@ -174,9 +62,10 @@ body.active2 .equal{
     border-radius: 30px;
     margin-left: 4px;
     position: relative;
+    margin-bottom: 17px;
+    margin-top: 2px;
   }
  
-
   .control #circle{
     width: 12px;
     height: 12px;
@@ -188,41 +77,17 @@ body.active2 .equal{
     border-radius: 30px;
   }
  
-  .control p{
-    color: #FFF;
-    cursor: pointer;
-    margin-right: 4px;
-  }
-
-
- 
-  .toggle{
-    display: flex;
-    justify-content: space-between;
-  }
   .right{
     display: flex;
     justify-content: flex-end;
   }
-  .toggle p{
+
+  .right p{
     margin: 0 5px;
     color: #FFF;
     cursor: pointer;
+    font-size: 15px;
   }
-
- 
-
-
-
-
-
-
-/* 
-  body.active{
-    background-color: red;
-  } */
-
-  
 
   .screen input {
     display: inline;
@@ -251,15 +116,13 @@ body.active2 .equal{
     overflow: hidden;
   }
 
- 
-
   .main-calculator{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
     border-radius: 10px;
-    background-color:var(--Dark-Blue2-theme1) ;
+    background-color:var(--main-calculator1) ;
     padding: 15px; 
     height: 330px;
     width: 400px;
@@ -276,15 +139,13 @@ body.active2 .equal{
     height: 50px;
     width: 80px;
     border-radius: 10px;
-    color:var(--Blue6-theme1);
+    color:var(--Blue-text1);
     font-size: 25px;
     font-weight: 700;
     font-family: 'Spartan',serif;
     border-style: none;
   }
   
- 
-
   .numbers{
       margin-right: 15px;
       box-shadow: 0px 3px 0px 0px var(--Dark-Blue5-theme1);
@@ -297,7 +158,6 @@ body.active2 .equal{
   .divide{
     margin-right: 15px;
   }
-
 
   .row-5{
     display: flex;
@@ -315,26 +175,27 @@ body.active2 .equal{
      font-weight: 700;
      font-family: 'Spartan', sans-serif;
      border-style: none;
-     
 }
 
-.del{
-    background-color: var(--Dark-Blue4-theme1);
-    color: #FFF;
-    
+.row .delete{
+  color: #FFF;
+  background-color: var(--del-res-background1);
+    box-shadow: 0px 3px 0px 0px var(--del-res-shadow1);
 }
 
 .reset{
-    background-color: var(--Dark-Blue4-theme1);
+    background-color: var(--del-res-background1);
     margin-right: 5px;
-    box-shadow: 0px 3px 0px 0px var(--Dark-Blue5-theme1);
+    box-shadow: 0px 3px 0px 0px var(--del-res-shadow1);
 }
 
 .equal{
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: hsl(25, 98%, 40%);
+    background-color:var(--equal-background1);
     margin-left: 5px;
-    box-shadow: 0px 3px 0px 0px var(--Dark-Red-theme1);
-    
+    box-shadow: 0px 3px 0px 0px var(--equal-shadow1);
+}
+
+.attribution{
+  margin-top: 20px;
 }
 
