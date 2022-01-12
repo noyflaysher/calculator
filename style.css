@@ -15,30 +15,123 @@
       --Blue6-theme1:hsl(221, 14%, 31%);/*blue text*/
       --White-theme1:hsl(0, 0, 100%);/*white text*/
       /*------------------------theme 2--------------------------*/
-    --Light-Gray-1-theme2:hsl(0, 0%, 90%); /*main-background*/
-    --Light-Gray-2-theme2:hsl(0, 5%, 81%); /*toggle background, keypad background*/
-    --Light-Gray-3-theme2:hsl(0, 0%, 93%); /*screen background, keypad background*/
-    --Dark-Cyan-1-theme2:hsl(185, 42%, 37%); /*key background*/
-    --Dark-Cyan-2-theme2:hsl(185, 58%, 25%); /*key shadow*/
-    --Orange-theme2:hsl(25, 98%, 40%); /*key background, toggle*/
-    --Dark-Orange-theme2:hsl(25, 98%, 40%); /*key background, toggle*/
-    --Light-yellow-theme2:hsl(45, 7%, 89%); /*key background*/
-    --Dark-Orange-2-theme2:hsl(35, 11%, 61%)    ; /*key background*/
+    --main-backgrond2:hsl(0, 0%, 90%); /*main-background*/
+    --toggle-calculate-background2:hsl(0, 5%, 81%); /*toggle background, keypad background*/
+    --screen-background2:hsl(0, 0%, 93%); /*screen background, keypad background*/
+    --del-reset-background2:hsl(185, 42%, 37%); /*key background*/
+    --del-reset-shadow2:hsl(185, 58%, 25%); /*key shadow*/
+    --equal-circle-background2:hsl(25, 98%, 40%); /*key background, toggle*/
+    --equal-circle-shadow2:hsl(25, 98%, 40%); /*key background, toggle*/
+    --key-background2:hsl(45, 7%, 89%); /*key background*/
+    --Key-shadow2:hsl(35, 11%, 61%)    ; /*key background*/
     --Dark-yellow-theme2:hsl(60, 10%, 19%); /*yellow text*/
-    --White-theme2:hsl(0, 0, 100%);/*white text*/
+    --White-text2:hsl(0, 0, 100%);/*white text*/
  /*------------------------theme 3--------------------------*/
- --Dark-Violet-1-theme3:hsl(268, 75%, 9%);/*main background*/
- --Dark-Violet-2-theme3:hsl(268, 71%, 12%);/*toggle background, keypad background, screen background*/
- --Dark-Violet-3-theme3:hsl(281, 89%, 26%);/*key background*/
- --Vivid-magenta-theme3:hsl(285, 91%, 52%);/*key shadow*/
- --Pure-cyan-theme3:hsl(285, 91%, 52%);/*key background, toggle*/
- --Soft-cyan-theme3:hsl(177, 92%, 70%);/*key shadow*/
- --Dark-Violet-4-theme3:hsl(268, 47%, 21%);/*key background*/
- --Dark-magenta-theme3: hsl(290, 70%, 36%);/*key shadow*/
- --Light-yellow-theme3: hsl(52, 100%, 62%);/*yellow text*/
+ --main-background3:hsl(268, 75%, 9%);/*main background*/
+ --toggle-calculate-background3:hsl(268, 71%, 12%);/*toggle background, keypad background, screen background*/
+ --screen-background3:hsl(281, 89%, 26%);/*key background*/
+ --key-s:hsl(285, 91%, 52%);/*key shadow*/
+ --key:hsl(285, 91%, 52%);/*key background, toggle*/
+ --del-shadow3:hsl(177, 92%, 70%);/*key shadow*/
+ --key-shadow3:hsl(268, 47%, 21%);/*key background*/
+ --key-background3: hsl(290, 70%, 36%);/*key shadow*/
+ --yellow-text3: hsl(52, 100%, 62%);/*yellow text*/
  --Dark-Blue-theme3:hsl(198, 20%, 13%); /*blue text*/
  --White-theme3:hsl(0, 0, 100%);/*white text*/
+ --circle-color-3:hsl(176, 100%, 44%);
   }
+
+  /* changed when we click on number two*/
+
+  body.active1{
+    background-color: var(--main-backgrond2);
+  }
+
+  body.active1 .control .box{
+    background-color: var(--toggle-calculate-background2);
+  }
+
+  body.active1 .screen{
+    background-color: var(--screen-background2);
+    color: #111;
+  }
+
+  body.active1 .control #circle{
+    background-color: var(--equal-circle-background2);
+  }
+
+  body.active1 .main-calculator{
+    background-color: var( --toggle-calculate-background2);
+  }
+
+  body.active1 .reset, body.active1 .del {
+    background-color: var(--del-reset-background2);
+    box-shadow: 0px 3px 0px 0px var(--del-reset-shadow2);
+    color:#FFF;
+  }
+
+  body.active1 button{
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+  }
+
+  body.active1.equal{
+    background-color: var(--equal-circle-background2);
+    box-shadow: 0px 3px 0px 0px var(--equal-circle-shadow2);
+  }
+
+  body.active1 .toggle h3, body.active1 .control p, body.active1 .right p {
+    color: #111;
+  }
+
+  /************************************************/
+/* changed when we click on number two*/
+
+body.active2{
+  background-color: var(--main-background3);
+}
+
+body.active2 .control .box{
+  background-color: var(--toggle-calculate-background3);
+}
+
+body.active2 .screen{
+  background-color: var( --toggle-calculate-background3);
+  color: var(--yellow-text3);
+}
+
+body.active2 .control #circle{
+  background-color:var(--circle-color-3);
+}
+
+body.active2 .toggle h3, body.active2 .control p, body.active2 .right p{
+  color:var(--yellow-text3);
+}
+
+body.active2 button{
+	box-shadow: 0px 3px 0px 0px var(--key-shadow3);
+	background-color:var(--key-background3);
+  color:var(--yellow-text3);
+}
+
+body.active2 .main-calculator{
+  background-color: var(--toggle-calculate-background3);
+}
+
+body.active2 .reset, body.active2 .del {
+  background-color: var( --toggle-calculate-background3);
+  box-shadow: 0px 3px 0px 0px var(--key-background3);
+  color:#FFF;
+}
+
+body.active2 .equal{
+  background-color: var(--circle-color-3);
+  box-shadow: 0px 3px 0px 0px var( --del-shadow3);
+  color:#FFF;
+}
+
+
+/************************************************/
+
 
   *{
     margin:0px;
@@ -54,88 +147,82 @@
     border-style: box ;
     align-items: center;
   }
-  
+
   .container{
     display: flex;
     flex-direction: column;
     margin-top: 70px;
     justify-content: space-between;
-    /* height: 500px; */
     width: 450px;
     margin:auto;
     align-items: center;
   }
 
 
-  .top{
-      margin-top: 100px;
-      display: flex;
-      flex-direction: row;
-      align-items:center;
+  h3{
+    color: #FFF;
   }
 
-  .calc{
-    color: white;
+  .control{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .control .box{
+    width: 60px;
+    height: 15px;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 30px;
+    margin-left: 4px;
+    position: relative;
+  }
+ 
+
+  .control #circle{
+    width: 12px;
+    height: 12px;
+    background-color: hsl(6, 63%, 50%);
+    position: absolute;
+    top: 1.5px;
+    left: 0;
+    z-index: 1;
+    border-radius: 30px;
+  }
+ 
+  .control p{
+    color: #FFF;
+    cursor: pointer;
+    margin-right: 4px;
   }
 
-  .right-side{
+
+ 
+  .toggle{
     display: flex;
     justify-content: space-between;
   }
-
-  .theme {
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    text-align: center;
-    margin: 22px 20px 0px 0px;
+  .right{
+    display: flex;
+    justify-content: flex-end;
   }
-
-  .toggle-bottom{
-    display: inline-block;
-    position: relative;
-    background-color:var(--Dark-Blue2-theme1) ;
-    padding: 2px 3px;
-    border-radius: 20px;
-    height: 20px;
-    width: 55px;
+  .toggle p{
+    margin: 0 5px;
+    color: #FFF;
     cursor: pointer;
-    
   }
 
-  .toggle-bottom input {
-    position: absolute;
-    z-index: 3;
-    opacity: 0;
-  }
+ 
 
-  .toggle-bottom span {           /*circle*/
-    height: 12px;
-    width: 12px;
-    line-height: 5px;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 3px;
-    appearance: none;
-    /* transition: all 0.3s ease-in-out; */
-    transition: 0.5s;
-   
-  }
+
+
+
+
+
+/* 
+  body.active{
+    background-color: red;
+  } */
+
   
-  .toggle-bottom input[value="1"]:checked ~ span {
-    background-color: red;
-    left: 4px;
-    
-  }
-  .toggle-bottom input[value="2"]:checked ~ span {
-    background-color: red;
-    left: 6px;
-  }
-  .toggle-bottom input[value="3"]:checked ~ span {
-    background-color: red;
-    left: 10px;
-  }
 
   .screen input {
     display: inline;
@@ -163,6 +250,8 @@
     color: white;
     overflow: hidden;
   }
+
+ 
 
   .main-calculator{
     display: flex;
@@ -194,6 +283,8 @@
     border-style: none;
   }
   
+ 
+
   .numbers{
       margin-right: 15px;
       box-shadow: 0px 3px 0px 0px var(--Dark-Blue5-theme1);
@@ -229,7 +320,7 @@
 
 .del{
     background-color: var(--Dark-Blue4-theme1);
-    color: white;
+    color: #FFF;
     
 }
 
