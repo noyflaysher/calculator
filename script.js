@@ -52,7 +52,7 @@ class Calculator{
                 result = prev-current 
                 break;
     
-            case 'x':
+            case 'X':
                 result = prev * current; 
                 break; 
     
@@ -118,7 +118,7 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculator.changeOperatio(button.innerText);
+        calculator.changeOperation(button.innerText);
         calculator.updateDisplay();       
     });
 });
