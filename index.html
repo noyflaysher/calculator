@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/mobile.css">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/colors.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@400;700&family=Open+Sans:wght@300&family=Raleway:wght@100&family=Sacramento&family=Spartan:wght@100&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="title">
+      <h3>Calc</h3>
+    <div class="flex">
+      <p class="theme">Theme</p>
+      <div class="control">
+        <div class="right">
+          <p id="one">1</p>
+          <p id="two">2</p>
+          <p id="three">3</p>
+        </div>
+        <div class="box">
+          <div id="circle"></div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="calculator">
+    <div class="screen">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
+    </div>
+    <div class="main-calculator">
+      <div class="row">
+        <button data-numbers class="numbers">7</button>
+        <button data-numbers class="numbers">8</button>
+        <button data-numbers class="numbers">9</button>
+        <button data-delete  class="operators delete">DEL</button>
+      </div>
+      <div class="row">
+        <button data-numbers class="numbers">4</button>
+        <button data-numbers class="numbers">5</button>
+        <button data-numbers class="numbers">6</button>
+        <button data-operators class="operators">+</button>
+      </div>
+      <div class="row">
+        <button data-numbers class="numbers">1</button>
+        <button data-numbers class="numbers">2</button>
+        <button data-numbers class="numbers">3</button>
+        <button data-operators class="operators">-</button>
+      </div>
+      <div class="row">
+        <button data-numbers class="numbers">.</button>
+        <button data-numbers class="numbers">0</button>
+        <button data-operators class="operators divide">/</button>
+        <button data-operators class="operators">x</button>
+      </div>
+      <div class="row-5">
+        <button data-reset class="reset">RESET</button>
+        <button data-equal class="equal">=</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Noy Flaysher</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,54 @@
+@media only screen and (max-width:385px){
+    .main-calculator{
+      padding: 10px; 
+      height: 220px;
+      width: 280px;
+    }
+    
+    .row>button{
+      height: 30px;
+      width: 50px;
+      font-size: 18px;
+    }
+  
+    .row.delete{
+      font-size: 15px;
+    }
+  
+    .row-5>button{
+      height: 30px;
+      width: 120px;
+      font-size: 15px;
+    
+  }
+  
+  .screen{
+    width: 280px;
+  }
+  
+  h3{
+    font-size: 18px;
+    margin-right: 2px;
+  }
+  
+  .theme{
+    margin-right: 1px;
+    font-size: 15px;
+
+  }
+
+  
+.previous-operand{
+    font-size: 20px;
+  }
+
+  .current-operand{
+    font-size: 24px;
+  }
+  
+  .right p{
+    font-size: 16px;
+}
+  }
+  
+  
