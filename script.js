@@ -1,3 +1,5 @@
+/***********calculate js***********/
+
 const previousOutput=document.querySelector('[data-previous-operand]');
 const currentOutput=document.querySelector('[data-current-operand]');
 
@@ -6,12 +8,6 @@ const operatorButtons=document.querySelectorAll('[data-operators]');
 const equalButton=document.querySelector('[data-equal]');
 const resetButton=document.querySelector('[data-reset]');
 const deleteButton=document.querySelector('[data-delete]');
-
-// let previousOperand = previousOutput.innerText;
-// let currentOperand = currentOutput.innerText;
-// let operation;
-
-console.log('hi');
 
 class Calculator{
 
@@ -32,7 +28,7 @@ class Calculator{
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
-    chooseOperation(operation){
+    changeOperation(operation){                 //change the previous with the current
         if(this.currentOperand === '') return;
         if(this.previousOperand !== '') {
             this.compute();                        //calculate the expression until there before the new operator
@@ -42,11 +38,11 @@ class Calculator{
         this.currentOperand = '';
     }
 
-    compute(){
+    compute(){                                     //calculate the expressions
         const prev=parseFloat(this.previousOperand);
         const current=parseFloat(this.currentOperand);
         let result;
-        if(isNaN(prev) || isNaN(current)) return;
+        if(isNaN(prev) || isNaN(current)) return;   //an operator
         switch(this.operation){
             case '+':
                 result = prev+current;
@@ -77,7 +73,7 @@ class Calculator{
     }
 
     delete(){
-       this.currentOperand = this.currentOperand.toString().slice(0, -1);
+       this.currentOperand = this.currentOperand.toString().slice(0, -1);      //remove the last operand
     }
 
     getDisplayNumber(number){
@@ -91,7 +87,7 @@ class Calculator{
             integerDisplay=integerDigits.toLocaleString('en',{
                maximumFractionDigits:0})
             }
-            if(decimalDigits!=null){
+            if(decimalDigits!=null){                               //Decimal number
                 return `${integerDisplay}.${decimalDigits}`;
             }
             else{
@@ -122,7 +118,7 @@ numberButtons.forEach(button => {
 
 operatorButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculator.chooseOperation(button.innerText);
+        calculator.changeOperatio(button.innerText);
         calculator.updateDisplay();       
     });
 });
@@ -141,6 +137,8 @@ deleteButton.addEventListener('click',() => {
     calculator.delete();
     calculator.updateDisplay();   
 });
+
+/***********changing colors js***********/
 
 var one=document.getElementById('one');
 one.addEventListener('click', function(){
