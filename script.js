@@ -68,6 +68,7 @@ class Calculator{
                 return;
         } 
         this.currentOperand = result;
+    
         this.operation = '';
         this.prevOperand = '';
     }
